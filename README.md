@@ -16,9 +16,8 @@ Originally designed for use in [PhantomAmp](https://www.patreon.com/posts/exclus
 - [IIR graphic equalizer](effects/graphic_eq_iir.cpp) using peaking EQ biquad filters
 - [Convolver](effects/convolver.cpp) for custom FIR filters (as WAV files)
   - Optimized FFT-based convolution, overlap-add
-- Low-latency audio output on Android using [Oboe](https://github.com/google/oboe)
-
-Calculations are done in 32-bit floating point.
+- Low-latency audio output on Android using [Oboe](sinks/oboe.cpp)
+- 32-bit floating point processing, for quality and performance
 
 ## Build
 

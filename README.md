@@ -10,8 +10,9 @@ Originally designed for use in [PhantomAmp](https://www.patreon.com/posts/exclus
   - Low-pass, high-pass, band-pass, notch, all-pass, peaking EQ, low shelf, high shelf
   - Frequency response graph generator for GUI
 - [FIR graphic equalizer](effects/graphic_eq_fir.cpp) with dynamic [FIR filter design](filters/fir_design.cpp)
-  - Supports both linear phase and minimum phase
+  - Supports linear phase and minimum phase (via homomorphic filtering)
   - Smooth Makima spline interpolation of gains, without overshoot
+  - Hann window-based filter design
   - Intuitive GUI graphs (frequency and phase response) using PCHIP interpolation
 - [IIR graphic equalizer](effects/graphic_eq_iir.cpp) using peaking EQ biquad filters
 - [Convolver](effects/convolver.cpp) for custom FIR filters (as WAV files)
@@ -34,3 +35,13 @@ CLI tools for testing:
 - `fxdsp-filter-test`
 - `fxdsp-gen-fr-test-combined`
 - `fxdsp-gen-fr-test-sweep`
+
+## Acknowledgements
+
+Third-party libraries:
+
+- Boost math
+- kissfft
+- Oboe (only on Android)
+
+Special thanks to @james34602 for DSP help.
